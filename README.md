@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/kashiroy96/Frontend_Invoice/branch/main/graph/badge.svg?token=892SCWIU8H)](https://codecov.io/gh/kashiroy96/Frontend_Invoice)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
