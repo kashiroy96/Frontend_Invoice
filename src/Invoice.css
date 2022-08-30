@@ -1,0 +1,312 @@
+.Invoice {
+  height: 100vh;
+  width:85%;
+  float: right;
+  background-color: #D6E9F7;
+  font-family: sans-serif;
+}
+
+.Header {
+  min-height:10%;
+  display: flex;
+  justify-content: space-between;
+}
+.First {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 20%;
+  background-color: #D6E9F7;
+ 
+}
+
+.Second {
+  min-height: 30%;
+  background-color: #D6EAF8;
+  margin-top: 20px;
+}
+
+.Third{
+  min-height: 30%;
+  display: flex;
+  background-color: #D6E9F7;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.First .Bill{
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 100px;
+  background-color: white;
+  margin-left: 40px;
+  align-items: center;
+}
+
+.First .Issued {
+  width: 500px;
+  height: 200px;
+  background-color: #D6EAF8;
+  margin-right: 20px;
+}
+
+.First .Bill #ChangeBtn{
+  min-width: 80px;
+  min-height: 20px;
+  display: flex;
+  margin-bottom: 35px;
+  margin-left: 180px;
+  align-items: center;
+  background: white;
+  color: #8079E3;
+  border: none;
+  font-size: 16px;
+}
+
+.First .Bill .Address{
+  margin-left: 10px;
+}
+
+.First .BillHeader{
+  margin-left: 40px;
+  min-width: 400px;
+  min-height: 20px;
+  background-color: white;
+  color: gray;
+}
+
+p { margin:0 }
+
+
+
+.InvoiceIssuedForm {
+  background-color: #D6EAF8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+input{
+  padding: 15px;
+  margin: 15px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 180px;
+  height: 10px;
+  color: black;
+  font-family: sans-serif;
+  background-color: white;
+}
+
+
+.invoiceFormInput{
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ModalCloseBtn{
+  display: flex;
+  width: 50px;
+  height: 20px;
+  align-items: center;
+  margin-left: 310px;
+}
+
+.Second #ItemBtn{
+  min-width: 150px;
+  min-height: 20px;
+  display: flex;
+  margin-bottom: 35px;
+  margin-left: 520px;
+  background: #D6E9F7;
+  border: none;
+  font-size: 16px;
+  justify-content: center;
+  color: #8079E3;
+  align-items: center;
+  align-content: center;
+}
+
+.tableHeadInvoice{
+  /* min-width: 928px; */
+  display: flex;
+  height: 20px;
+  width:1000px;
+  background-color: white;
+  margin-left: 120px;
+  border-style: solid;
+  border-color: lightgray;
+  align-items: center;
+}
+
+
+.tableRowInvoiceItem{
+  background-color: #FFFFFF;
+  display: flex;
+  height: 25px;
+  width: 1000px;
+  margin-left: 120px;
+  margin-right: 30px;
+  border-style: solid;
+  border-color: lightgray;
+  margin-top: 0px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.ItemQInput {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.Third .Notes {
+  min-width: 400px;
+  min-height: 100px;
+  background-color: white;
+  margin-left: 40px;
+  margin-top: 5px;
+ 
+}
+
+.Third .Pnotes{
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.AllItem {
+  width: 500px;
+  min-height: 120px;
+  background-color: white;
+  margin-right: 40px;
+
+}
+
+.tableRowAmount{
+  background-color: #FFFFFF;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+ 
+}
+/* .Third .amount{
+  width: 500px;
+  height: 50px;
+  margin-top: 1px;
+  margin-right: 40px;
+  background-color: white;
+  color: grey;
+  font-style:serif;
+}
+#pAmount{
+  margin-left: 30px;
+} */
+
+.amountNameData{
+  width:80%;
+  font-style:serif;
+  color: grey;
+}
+.amountQuantityData{
+  width:10%;
+  
+}
+.amountPriceData{
+  width:10%;
+}
+
+.totalRowAmount {
+  background-color: #FFFFFF;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: lightgray;
+}
+
+.SubmitBtn{
+  width: 150px;
+  height: 40px;
+  margin-right: 55px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.itemIntd{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.itemInDeltd{
+  margin-left: 20px;
+  width: 10px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}  
+.itemth{
+  display: flex;
+  width: 25%;
+  justify-content: center;
+  }
+
+  .tableRowInvoice {
+    display: flex;
+    margin-right: 40px;
+    margin-left: 30px;
+  }
+
+  .viewInvoicetd{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 16.67%;
+    justify-content: center;
+  }
+
+  .ivoiceth{
+    display: flex;
+    margin-right: 10px;
+    width: 16.67%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .InvoiceTableHead{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 40px;
+    justify-content: space-between;
+  }
+  .PaidBtn{
+    width: 60px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px;
+    background-color: #F8EDCB;
+    border: none;
+    color: black;
+  }

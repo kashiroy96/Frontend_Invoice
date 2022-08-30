@@ -1,0 +1,50 @@
+.PageRow {
+  display: flex;
+  flex-direction: row;
+  max-width: 200px;
+  align-content: center;
+  justify-content: center;
+  margin: auto
+}
+
+.PageItem {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 20px;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.PageBtn {
+  display: flex;
+  width: 30px;
+  height: 25px;
+  /* line-height: inherit; */
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 11px;
+}
+
+.active {
+  background-color: #D6E9F7;
+}
+
+p {
+  display: flex;
+}
+
+.SelectBox{
+  display: flex;
+  width: 120px;
+  border-radius: 5px;
+  height: 30px;
+  /* align-content: center; */
+  align-items: flex-start;
+  text-align: center;
+  /* justify-content: center; */
+  padding-top: 5px;
+  font-family: sans-serif;
+}
