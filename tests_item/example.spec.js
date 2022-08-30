@@ -1,6 +1,8 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+const baseURL = "https://kashi-invoice.netlify.app"
+
 const { itemsRoute } = require("../src/mocks/itemHandlers.js");
 
 test.beforeEach(async ({ page }) => {
@@ -10,10 +12,10 @@ test.beforeEach(async ({ page }) => {
 
 test('test', async ({ page }) => {
   // Go to http://localhost:3000/
-  await page.goto('http://localhost:3000/');
+  await page.goto(baseURL);
   // Click text=Item
   await page.locator('text=Item').click();
-  await expect(page).toHaveURL('http://localhost:3000/item');
+  await expect(page).toHaveURL(`${baseURL}/item`);
   // Click [placeholder="Search\.\.\."]
   await page.locator('[placeholder="Search\\.\\.\\."]').click();
   // Select name
@@ -40,7 +42,7 @@ test('test', async ({ page }) => {
   await page.locator('[placeholder="Search\\.\\.\\."]').fill('');
   // Click text=Add Item
   await page.locator('text=Add Item').click();
-  await expect(page).toHaveURL('http://localhost:3000/addItem');
+  await expect(page).toHaveURL(`${baseURL}/addItem`);
   // Click [placeholder="Name"]
   await page.locator('[placeholder="Name"]').click();
   // Fill [placeholder="Name"]
@@ -55,7 +57,7 @@ test('test', async ({ page }) => {
   await page.locator('[placeholder="Description"]').fill('prescribed by doctors');
   // Click text=Save Item
   await page.locator('text=Save Item').click();
-  await expect(page).toHaveURL('http://localhost:3000/item');
+  await expect(page).toHaveURL(`${baseURL}/item`);
   // Select name
   await page.locator('select').selectOption('name');
   // Click [placeholder="Search\.\.\."]
