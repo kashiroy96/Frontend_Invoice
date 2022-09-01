@@ -31,7 +31,7 @@ const Pagination = ({ currentPage, postsPerPage, totalPosts, setCurrentPage }) =
 
       <div className="PageRow">
         <div> <button onClick={handlePrev} className="PageBtn"> <ChevronLeftIcon /> </button></div>
-        <p>{currentPage * postsPerPage} of {totalPosts} </p>
+        <p style={{ marginTop: 10 }}>{currentPage * postsPerPage} of {totalPosts} </p>
         <div > <button onClick={handleNext} className="PageBtn"> <ChevronRightIcon /> </button></div>
       </div>
     </nav>

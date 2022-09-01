@@ -29,8 +29,9 @@ function ViewInvoice() {
             InvoiceNumber: invoice.ReferenceNumber,
             Items: invoice.InvoiceItems,
             Amount: invoice.Amount,
+            DueAmount: invoice.Status === "paid" ? 0 : invoice.Amount,
             Notes: invoice.Notes,
-            DueDate: invoice.DueDate,
+            DueDate: new Date(invoice.DueDate * 1000).toUTCString().slice(5, 16),
             Status: invoice.Status,
           })
 
@@ -48,6 +49,7 @@ function ViewInvoice() {
     console.log(invoice);
     const invoiceId = invoice.id;
     const updatedStatus = invoice.Status === "paid" ? "unpaid" : "paid";
+    const updatedDueAmount = invoice.Status === "paid" ? invoice.Amount : 0;
     try {
       const updateInvoiceRequest = await axios.patch(
         `http://localhost:8080/v1/invoice/?invoice_id=${invoiceId}&status=${updatedStatus}`
@@ -57,6 +59,7 @@ function ViewInvoice() {
           return {
             ...currInvoice,
             Status: updateInvoiceRequest.data.Status,
+            DueAmount: updatedDueAmount,
           };
         }
         return currInvoice;

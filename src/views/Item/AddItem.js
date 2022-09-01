@@ -65,7 +65,7 @@ const AddItemForm = () => {
       isActive: true,
       description: values.description
     };
-    console.log("hhhh", newItem)
+    // console.log("hhhh", newItem)
     async function postItem() {
       try {
         const response = await axios.post(baseURL, newItem);

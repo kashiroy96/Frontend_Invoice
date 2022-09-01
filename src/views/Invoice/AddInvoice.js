@@ -25,6 +25,7 @@ const AddInvoiceForm = () => {
     InvoiceNumber: "",
     Items: [],
     Amount: 0,
+    DueAmount: 0,
     IssueDate: "",
     DueDate: "",
     Notes: "",
@@ -59,7 +60,7 @@ const AddInvoiceForm = () => {
     setItemList([...itemList, newItem]);
   }
 
-  const onChange = (event) => {
+  const onChangeNotes = (event) => {
     setInvoice({ ...invoice, [event.target.name]: event.target.value });
   };
 
@@ -158,7 +159,7 @@ const AddInvoiceForm = () => {
             placeholder="Comments..."
             name="Notes"
             value={invoice.Notes}
-            onChange={onChange}
+            onChange={onChangeNotes}
           />
 
         </div>

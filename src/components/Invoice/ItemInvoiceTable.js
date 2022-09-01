@@ -20,7 +20,8 @@ const InvoicesItemTable = ({ invoice, setInvoice, itemList, setItemList }) => {
         return invoiceItem;
       })
     );
-    setInvoice({ ...invoice, Items: itemList, Amount: itemList.reduce((prev, curr) => prev + curr.amount, 0) });
+    const amount = itemList.reduce((prev, curr) => prev + curr.amount, 0);
+    setInvoice({ ...invoice, Items: itemList, Amount: amount, DueAmount: amount, });
 
   }
 

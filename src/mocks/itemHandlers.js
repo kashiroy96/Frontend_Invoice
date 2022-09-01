@@ -25,3 +25,18 @@ export const itemsRoute = (page) => page.route('http://localhost:8080/v1/item/it
 });
 
 
+export const addItemRoute = (page) =>
+  page.route("http://localhost:8080/v1/item/add", (route) => {
+    route.fulfill({
+      body: JSON.stringify({
+        id: "ggd55741-89e8-47d8-bf5a-1374703d2437",
+        name: "surfExcel",
+        stock: "1015",
+        price: "299",
+        isActive: true,
+        description: "good product"
+      },
+      ),
+    });
+  });
+

@@ -31,7 +31,7 @@ function ViewItem({ onClickAddItem }) {
             name: item.Name,
             description: item.Description,
             price: item.Price,
-            added_on: new Date(item.CreatedAt).toUTCString().slice(5, 16),
+            added_on: new Date(item.CreatedAt * 1000).toUTCString().slice(5, 16),
           })
 
       });

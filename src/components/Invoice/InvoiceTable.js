@@ -23,7 +23,7 @@ const InvoiceTable = ({ invoices, changeStatus }) => {
         {invoices.map((invoice) => {
           // var items = invoice.InvoiceItems;
           // var total = items.reduce((prev, curr) => prev + curr.Price*curr.Quantity, 0);
-          // console.log(total);
+          console.log(invoice);
           return (
             <tr className="tableRowInvoice" key={invoice.id}>
               <td className="viewInvoicetd">{invoice.DueDate}</td>
@@ -31,7 +31,7 @@ const InvoiceTable = ({ invoices, changeStatus }) => {
               <td className="viewInvoicetd">{invoice.InvoiceNumber}</td>
               <td className="viewInvoicetd"><button className="PaidBtn" onClick={() => changeStatus(invoice)}>{invoice.Status}</button></td>
               <td className="viewInvoicetd">{invoice.Amount}</td>
-              <td className="viewInvoicetd">{ }</td>
+              <td className="viewInvoicetd">{invoice.DueAmount}</td>
             </tr>
           )
         })}

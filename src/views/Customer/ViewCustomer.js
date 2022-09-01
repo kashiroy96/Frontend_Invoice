@@ -57,7 +57,7 @@ function ViewCustomer({ changeCustomer }) {
           name: customer.Name,
           email: customer.Email,
           phone: customer.PhoneNumber,
-          created_on: new Date(customer.CreatedAt).toUTCString().slice(5, 16),
+          created_on: new Date(customer.CreatedAt * 1000).toUTCString().slice(5, 16),
         })
 
     });
